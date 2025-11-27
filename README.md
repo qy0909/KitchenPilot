@@ -10,7 +10,7 @@ Kitchen Pilot is a generative AI application designed to streamline permits and 
 
 *Built by **Team AAA** for **CodeFest2025 Hackathon**.*
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Cikgu Compliance (AI Chat)
 An interactive AI expert trained on Malaysian local laws and F&B operational guidelines.
@@ -22,11 +22,9 @@ A quick compliance checker that compares your existing documents against officia
 An intelligent document analysis tool. Upload your Standard Operating Procedures (SOPs) or compliance logs.
 - **Goal:** Automatically detect gaps in your operations before the health inspector does.
 
----
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** [Streamlit](https://streamlit.io/) (Python)
 - **Styling:** Custom CSS for responsive UI cards
 - **Backend/AI:** JamAI
 
----
