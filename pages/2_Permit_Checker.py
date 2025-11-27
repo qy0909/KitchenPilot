@@ -7,11 +7,13 @@ st.title("Permit Compliance Check")
 st.caption("A quick compliance check for Malaysian F&B owners. Find out if you are missing any required permits or licenses.")
 
 # JamAI Configuration
+# Ensure these secrets are set in your .streamlit/secrets.toml file
 PAT = st.secrets["PAT"]
 PROJECT_ID = st.secrets["PROJECT_ID"]
 ACTION_TABLE_ID = "PermitCheck" 
 INPUT_COL = "Input"
 
+# Initialize JamAI
 jamai = JamAI(token=PAT, project_id=PROJECT_ID)
 
 # Helper Functions
@@ -102,6 +104,7 @@ if st.button("Check Compliance", type="primary"):
             header_permits = "### Senarai Permit Wajib"
             header_missing = "### Dokumen Yang Hilang"
             header_score = "### Skor Pematuhan"
+            header_action = "### Tindakan Disyorkan" # New Translation
         else:
             t_input_summary = "Business Summary"
             t_analysis_result = "Analysis Result"
@@ -118,6 +121,7 @@ if st.button("Check Compliance", type="primary"):
             header_permits = "### Mandatory Permits List"
             header_missing = "### Missing Documents"
             header_score = "### Compliance Score"
+            header_action = "### Recommended Action" # New Translation
 
         # DISPLAY INPUT SUMMARY BEFORE RESULTS
         st.subheader(t_input_summary)
@@ -166,13 +170,13 @@ if st.button("Check Compliance", type="primary"):
                             if hasattr(val, "text"): return val.text
                             return str(val) if val else "N/A"
 
-                        # Required Permits
+                        # 1. Required Permits
                         st.markdown(header_permits)
                         val_required = get_text("Output") 
                         if val_required == "N/A": val_required = get_text("required_permits")
                         st.info(val_required)
 
-                        # Missing Permits & Score
+                        # 2. Missing Permits & Score
                         col_a, col_b = st.columns(2)
                         
                         with col_a:
@@ -186,7 +190,15 @@ if st.button("Check Compliance", type="primary"):
                             val_score = get_text("CalScore")
                             if val_score == "N/A": val_score = get_text("score")
                             st.success(val_score)
+
+                        # 3. Action 
+                        st.divider()
+                        st.markdown(header_action)
+                        val_action = get_text("Action") # Extracting Action column
+                        st.write(val_action)
                         
+                        st.divider()
+
                         # AI DISCLAIMER
                         st.caption(t_disclaimer)
 
@@ -212,6 +224,9 @@ if st.button("Check Compliance", type="primary"):
                             f"{header_score.replace('#', '').strip()}\n"
                             f"{'-'*30}\n"
                             f"{val_score}\n\n"
+                            f"{header_action.replace('#', '').strip()}\n"
+                            f"{'-'*30}\n"
+                            f"{val_action}\n\n"
                             f"==============================\n"
                             f"{t_disclaimer.replace('**', '')}"
                         )
