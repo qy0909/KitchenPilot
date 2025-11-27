@@ -1,8 +1,8 @@
 # Kitchen Pilot 👨‍🍳✈️
 
-[![Streamlit App](https://kitchenpilot.streamlit.app/)
+[Click here to launch Kitchen Pilot 🚀](https://kitchenpilot.streamlit.app/)
 
-**Live Demo:** [Click here to launch Kitchen Pilot 🚀](https://kitchenpilot.streamlit.app/)
+**Live Demo:** [Click here to view demo]()
 
 **Your AI compliance partner for Malaysian F&B.**
 
