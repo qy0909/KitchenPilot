@@ -31,6 +31,4 @@ An intelligent document analysis tool. Upload your Standard Operating Procedures
 ## Slides Link
 https://www.canva.com/design/DAG55JBNN1E/MzOedaF7xH-TPB3PLAJ0rA/edit?utm_content=DAG55JBNN1E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-## Demo Link
-https://www.canva.com/design/DAG55h6vCnA/YvKsK347h0Acr9RAoKxLQA/edit?utm_content=DAG55h6vCnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
