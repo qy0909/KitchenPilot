@@ -2,7 +2,7 @@
 
 [Click here to launch Kitchen Pilot 🚀](https://kitchenpilot.streamlit.app/)
 
-**Live Demo:** [Click here to view demo]()
+**Live Demo:** [[Click here to view demo]()](https://www.canva.com/design/DAG55h6vCnA/YvKsK347h0Acr9RAoKxLQA/edit?utm_content=DAG55h6vCnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 **Your AI compliance partner for Malaysian F&B.**
 
